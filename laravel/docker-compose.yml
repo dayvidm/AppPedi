@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: pedela_db
+      DB_USERNAME: pedeuser
+      DB_PASSWORD: pede1234
+    working_dir: /var/www
+    depends_on:
+      - db
+      - web
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: pedeuser
+      POSTGRES_PASSWORD: pede1234
+      POSTGRES_DB: pedela_db
+  web:
+    image: nginx
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
