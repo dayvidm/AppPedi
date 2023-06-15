@@ -9,11 +9,11 @@ type FormInputProps = {
 
 export default function FormInput({ label, defaultValue, type = 'text', register }: FormInputProps) {
   return (
-    <div className="mb-1">
-      <label className="block mb-2 text-gray-800">{label}</label>
+    <div className="mt-2">
+      <label className="block mb-1 text-gray-800">{label}</label>
       <input
         type={type}
-        className="border border-gray-300 px-3 py-2 rounded w-full"
+        className="border border-gray-300 px-3 py-2 rounded w-full mr-10"
         defaultValue={defaultValue}
         {...register(label)}
       />

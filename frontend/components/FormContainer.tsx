@@ -18,6 +18,7 @@ export function FormContainer({
         component="form"
         container
         spacing={2}
+        justifyContent={'center'}
         onSubmit={(event: FormEvent) => {
           if (onSubmitHandler) {
             onSubmitHandler(event);
