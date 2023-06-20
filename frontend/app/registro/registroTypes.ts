@@ -1,0 +1,1 @@
+export const REGISTRO_API_REQUEST = '/register';
