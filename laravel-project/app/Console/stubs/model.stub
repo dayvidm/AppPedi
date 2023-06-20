@@ -1,0 +1,25 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Helpers\Constants;
+
+class {{class}} 
+{
+    protected $connection = ';
+
+    // Alterar e descomentar
+    // protected $table = '';
+    // public $sequence = '';
+
+    public $timestamps = false;
+
+
+    protected $guarded = [];
+
+    protected $fillable = [
+        '', '',
+    ];
+
+
+}

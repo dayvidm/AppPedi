@@ -1,5 +1,6 @@
 'use client'
 import FormButton from "@/components/Botoes/BotaoPadrao";
+import { BotaoSalvar } from "@/components/Botoes/BotaoSalvar";
 import { FormContainer } from "@/components/FormContainer";
 import FormInput from "@/components/FormInput";
 import { Box, Grid, Link, Typography } from "@mui/material";
@@ -18,9 +19,9 @@ export default function login() {
             <Grid xs={2}>
               <FormInput label="E-mail" register={rhfmethods.register} name="email"/>
               <FormInput label="Senha" register={rhfmethods.register} name="password"/>
-              <FormButton label="Entrar" />
+              <BotaoSalvar text={'gravar'}  />
               <Typography fontWeight={200} mb={2}>
-                <Link href="/login">
+                <Link href="/registro">
                   <span className="text-gray-800 hover:text-gray-600">Ainda não é registrado Clique Aqui</span>
                 </Link>
               </Typography>

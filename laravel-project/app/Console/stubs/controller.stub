@@ -1,0 +1,19 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Services\{{class}}Service;
+use App\Models\{{class}};
+
+class {{class}}Controller extends Controller
+{
+
+    public function __construct(
+        {{class}}Service $service
+    )
+    {
+        $this->model = {{class}}::class;
+        $this->service = $service;
+    }
+
+}

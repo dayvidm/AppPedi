@@ -1,14 +1,13 @@
 # AppPedi
 Tecnologias utilizadas
-Laravel 8.0
+Laravel 10.0
 PostgreSQL 13
-React 17
+React 18
 Docker
 Pré-requisitos
 Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
 
 Docker
-Docker Compose
 Como rodar a aplicação
 Clone o repositório:
 
@@ -42,9 +41,13 @@ Crie uma branch para sua feature (git checkout -b feature/sua-feature)
 Faça commit de suas alterações (git commit -am 'Adiciona nova feature')
 Push para o branch (git push origin feature/sua-feature)
 Crie um novo Pull Request
+
+Adicionais : 
+Para Criar uma estrutura de Entidade utilize o comando :
+docker exec -it laravel-project-app-1 php artisan gerar:entidade Lojas
+Após isso vá em: api/app/Providers/RepositoryServiceProvider.php  e faça o bind como já existe lá.
+
 Equipe
-Nome do desenvolvedor 1
-Nome do desenvolvedor 2
-Nome do desenvolvedor 3
+Dayvid Mesquita da Silva
 Licença
 Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.

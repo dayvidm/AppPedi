@@ -1,0 +1,20 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Interfaces\Repositories\{{class}}RepositoryInterface;
+use App\Interfaces\Services\{{class}}ServiceInterface;
+
+class {{class}}Service implements {{class}}ServiceInterface
+{
+    /**
+     * @{{class}}RepositoryInterface ${{name}}Repository
+     */
+    protected {{class}}RepositoryInterface $repository;
+
+    public function __construct({{class}}RepositoryInterface $interface)
+    {
+        $this->repository = $interface;
+    }
+
+}
