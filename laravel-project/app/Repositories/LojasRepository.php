@@ -17,7 +17,7 @@ class LojasRepository implements LojasRepositoryInterface
         $query = Lojas::query();
 
         if ($nomeLoja) {
-            $query->where('nome_loja', $nomeLoja);
+            $query->where('nome_loja', 'like', '%' . $nomeLoja . '%');
         }
 
         return $query->get()->toArray();

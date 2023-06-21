@@ -20,6 +20,7 @@ class LojasController extends Controller
 
     public function index(Request $request)
     {
+
         $nomeLoja = $request->input('nome_loja');
         $response = $this->service->getLojas($nomeLoja);
         return $this->sendResponse($response);
