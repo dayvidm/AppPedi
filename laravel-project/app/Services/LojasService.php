@@ -17,4 +17,9 @@ class LojasService implements LojasServiceInterface
         $this->repository = $interface;
     }
 
+    public function getLojas($nomeLoja)
+    {
+        $nomeLoja = false;
+        return $this->repository->getLojas($nomeLoja);
+    }
 }

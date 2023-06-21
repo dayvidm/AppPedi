@@ -3,22 +3,16 @@
 namespace App\Models;
 
 use App\Helpers\Constants;
+use Illuminate\Database\Eloquent\Model;
 
-class Lojas 
+class Lojas extends Model
 {
-    protected $connection = ';
-
-    // Alterar e descomentar
-    // protected $table = '';
-    // public $sequence = '';
-
-    public $timestamps = false;
-
-
-    protected $guarded = [];
+    protected $table = Constants::LOJAS;
 
     protected $fillable = [
-        '', '',
+        'user_id',
+        'endereco',
+        'nome_loja',
     ];
 
 

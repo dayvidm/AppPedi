@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\LojasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('refresh', 'refresh');
 });
 Route::get('/teste', [ProdutoController::class, 'teste']);
+
+Route::get('/lojas', [LojasController::class, 'index'])->name('lojas.index');

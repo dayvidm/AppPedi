@@ -5,12 +5,12 @@ namespace {{namespace}};
 use App\Models\{{class}};
 use App\Interfaces\Repositories\{{class}}RepositoryInterface;
 
-class {{class}}Repository extends BaseRepository implements {{class}}RepositoryInterface
+class {{class}}Repository implements {{class}}RepositoryInterface
 {
-
+    private $model;
     public function __construct({{class}} $model)
     {
-        parent::__construct($model);
+        $this->model = $model;
     }
 
 }
